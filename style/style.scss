@@ -1,0 +1,143 @@
+$Violet: hsl(257, 40%, 49%);
+$SoftMagenta: hsl(300, 69%, 71%);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  background: $Violet url("/images/bg-mobile.svg") no-repeat;
+  background-size: contain;
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  body {
+    margin: 0;
+    .main {
+      margin: 1.8rem 0;
+      padding: 0 2.2rem;
+      .left {
+        .logo {
+          max-width: 8rem;
+        }
+        .mockup {
+          margin-top: 3.5rem;
+          max-width: 100%;
+        }
+      }
+      .right {
+        h2,
+        p {
+          color: #fff;
+          text-align: center;
+        }
+        h2 {
+          margin-top: 3rem;
+          font-family: Poppins, sans-serif;
+        }
+        p {
+          line-height: 1.5rem;
+        }
+        .buttonDiv {
+          display: flex;
+          justify-content: center;
+          button {
+            margin-top: 0.5rem;
+            width: 12.5rem;
+            border: none;
+            padding: 0.8rem;
+            border-radius: 1.5rem;
+            font-family: Poppins, sans-serif;
+            color: $Violet;
+            box-shadow: 0 0.3rem 1rem -0.3rem rgb(0, 0, 0);
+            transition: background-color 0.2s, color 0.2s;
+            &:hover {
+              cursor: pointer;
+              background-color: $SoftMagenta;
+              color: #fff;
+            }
+          }
+        }
+        .icons {
+          margin-top: 4rem;
+          display: flex;
+          justify-content: center;
+          .icon1,
+          .icon2,
+          .icon3 {
+            margin: 0 0.4rem;
+            display: flex;
+            border: 1px solid white;
+            border-radius: 50%;
+            transition: border 0.2s;
+            svg {
+              width: 0.9rem;
+              height: 0.9rem;
+              padding: 0.5rem;
+              box-sizing: content-box;
+              transition: fill 0.2s;
+            }
+            &:hover {
+              cursor: pointer;
+              border: 1px solid $SoftMagenta;
+              svg {
+                fill: $SoftMagenta;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 710px) {
+  html {
+    background: $Violet url("/images/bg-desktop.svg") no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    body {
+      .main {
+        margin: 0 3.7rem;
+        padding: 0;
+        display: grid;
+        grid-template: 1fr / 55% auto;
+        gap: 3rem;
+        max-width: 82rem;
+        // background-color: rgba(0, 255, 0, 0.5);
+        .left {
+          grid-area: 1 / 1 / 2 / 2;
+          display: flex;
+          flex-direction: column;
+          .logo {
+            max-width: 13.5rem;
+          }
+        }
+        .right {
+          grid-area: 1 / 2 / 2 / 3;
+          h2,
+          p {
+            text-align: left;
+          }
+          h2 {
+            margin-top: 9.5rem;
+            max-width: 30rem;
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 1.13rem;
+            margin-right: 1rem;
+            line-height: 1.6rem;
+          }
+          .buttonDiv {
+            justify-content: start;
+          }
+          .icons {
+            justify-content: end;
+            margin-top: 12rem;
+          }
+        }
+      }
+    }
+  }
+}

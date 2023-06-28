@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: hsl(257deg, 40%, 49%) url("/images/bg-mobile.svg") no-repeat;
+  background-size: contain;
+  font-size: 16px;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+}
+html body {
+  margin: 0;
+}
+html body .main {
+  margin: 1.8rem 0;
+  padding: 0 2.2rem;
+}
+html body .main .left .logo {
+  max-width: 8rem;
+}
+html body .main .left .mockup {
+  margin-top: 3.5rem;
+  max-width: 100%;
+}
+html body .main .right h2,
+html body .main .right p {
+  color: #fff;
+  text-align: center;
+}
+html body .main .right h2 {
+  margin-top: 3rem;
+  font-family: Poppins, sans-serif;
+}
+html body .main .right p {
+  line-height: 1.5rem;
+}
+html body .main .right .buttonDiv {
+  display: flex;
+  justify-content: center;
+}
+html body .main .right .buttonDiv button {
+  margin-top: 0.5rem;
+  width: 12.5rem;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 1.5rem;
+  font-family: Poppins, sans-serif;
+  color: hsl(257deg, 40%, 49%);
+  box-shadow: 0 0.3rem 1rem -0.3rem rgb(0, 0, 0);
+  transition: background-color 0.2s, color 0.2s;
+}
+html body .main .right .buttonDiv button:hover {
+  cursor: pointer;
+  background-color: hsl(300deg, 69%, 71%);
+  color: #fff;
+}
+html body .main .right .icons {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+html body .main .right .icons .icon1,
+html body .main .right .icons .icon2,
+html body .main .right .icons .icon3 {
+  margin: 0 0.4rem;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: border 0.2s;
+}
+html body .main .right .icons .icon1 svg,
+html body .main .right .icons .icon2 svg,
+html body .main .right .icons .icon3 svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  padding: 0.5rem;
+  box-sizing: content-box;
+  transition: fill 0.2s;
+}
+html body .main .right .icons .icon1:hover,
+html body .main .right .icons .icon2:hover,
+html body .main .right .icons .icon3:hover {
+  cursor: pointer;
+  border: 1px solid hsl(300deg, 69%, 71%);
+}
+html body .main .right .icons .icon1:hover svg,
+html body .main .right .icons .icon2:hover svg,
+html body .main .right .icons .icon3:hover svg {
+  fill: hsl(300deg, 69%, 71%);
+}
+
+@media screen and (min-width: 710px) {
+  html {
+    background: hsl(257deg, 40%, 49%) url("/images/bg-desktop.svg") no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  html body .main {
+    margin: 0 3.7rem;
+    padding: 0;
+    display: grid;
+    grid-template: 1fr/55% auto;
+    gap: 3rem;
+    max-width: 82rem;
+  }
+  html body .main .left {
+    grid-area: 1/1/2/2;
+    display: flex;
+    flex-direction: column;
+  }
+  html body .main .left .logo {
+    max-width: 13.5rem;
+  }
+  html body .main .right {
+    grid-area: 1/2/2/3;
+  }
+  html body .main .right h2,
+html body .main .right p {
+    text-align: left;
+  }
+  html body .main .right h2 {
+    margin-top: 9.5rem;
+    max-width: 30rem;
+    font-size: 2.5rem;
+  }
+  html body .main .right p {
+    font-size: 1.13rem;
+    margin-right: 1rem;
+    line-height: 1.6rem;
+  }
+  html body .main .right .buttonDiv {
+    justify-content: start;
+  }
+  html body .main .right .icons {
+    justify-content: end;
+    margin-top: 12rem;
+  }
+}/*# sourceMappingURL=style.css.map */
